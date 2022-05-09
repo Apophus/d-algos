@@ -1,4 +1,6 @@
 """
+https://www.codewars.com/kata/529bf0e9bdf7657179000008/train/python
+
 Sudoku is a game played on a 9x9 grid.
 The goal of the game is to fill all cells of the grid with digits from 1 to 9, 
 so that each column, each row, 
@@ -46,17 +48,18 @@ def get_columns(board):
 
     return columns
 
-def get_block(board,part):
+
+def get_block(board, part):
     ll = []
-    for i in range(3):
+    for i in range(part, part + 3, part):
         for k in range(3):
             l = board[i][k]
             ll.append(l)
     return ll
 
+
 def get_all_blocks(board):
     blocks = [[] for i in range(9)]
-
 
     return blocks
 
