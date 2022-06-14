@@ -6,6 +6,11 @@ class CustomInt(int):
 def add(n):
     return CustomInt(n)
 
+class add(int):
+    __call__ = lambda self, value: add(self + value)
+
+add = type('', (int,), {'__call__': lambda s,n: add(s+n)})
+
 
 if __name__ == '__main__':
      k = add(2)(3)
