@@ -58,22 +58,22 @@ def print_singly_linked_list(node, sep, fptr):
 
 def insertNodeAtPosition(llist, data, position):
     # Write your code here
-    counter = 0
-    curr_node = llist
-    new_node = SinglyLinkedListNode(data)
+
+    start = llist
     if position == 0:
-        new_node.next = curr_node
-        llist = new_node
+        return SinglyLinkedListNode(data, llist)
+    while position > 1:
+        llist = llist.next
+        position -= 1
+        print(position, data)
+    new_node = SinglyLinkedListNode(data)
+    new_node.next = llist.next
+    llist.next = new_node
+    return start
 
-        return curr_node
 
-    while curr_node.next is not None:
-
-        if counter == position:
-            new_node.next = curr_node
-            curr_node.next = SinglyLinkedListNode(data)
-            break
-        counter += 1
-        curr_node = curr_node.next
-
-    return llist
+if __name__ == '__main__':
+    node1 = SinglyLinkedListNode(16)
+    node2 = SinglyLinkedListNode(13)
+    node1.next = node2
+    node2.next = SinglyLinkedListNode(7)
