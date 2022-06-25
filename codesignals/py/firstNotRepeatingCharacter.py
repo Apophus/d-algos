@@ -15,5 +15,6 @@ def solution(s):
     print(s[min(res_index)])
     return s[min(res_index)]
 
+
 if __name__ == '__main__':
     solution('abacabad')
