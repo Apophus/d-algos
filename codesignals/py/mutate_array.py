@@ -41,5 +41,5 @@ def mutateTheArray(n, a):
             elif 1 <= index <= len(a) - 1:
                 p = a[index-1] + a[index] + a[index+1]
             else:
-                elif
+                ...
 
