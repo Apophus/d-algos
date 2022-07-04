@@ -1,18 +1,21 @@
-def solution(number):
-    # TODO finish this
-    roman_ob = {'I': 1,
-    'V': 5,
-    'X': 10,
-    'L': 50,
-    'C': 100,
-    'D': 500,
-    'M': 1000}
-    roman_translation = ''
-    for key in roman_ob.keys():
-        if roman_ob[key] == number:
-            roman_translation += key
-            break
-    filtered = [key for key in roman_ob if roman_ob[key] >=number]
-
-
-    return roman_translation
+def solution(n):
+    roman_numerals = {1000: 'M',
+                      900: 'CM',
+                      500: 'D',
+                      400: 'CD',
+                      100: 'C',
+                      90: 'XC',
+                      50: 'L',
+                      40: 'XL',
+                      10: 'X',
+                      9: 'IX',
+                      5: 'V',
+                      4: 'IV',
+                      1: 'I'
+                      }
+    roman_string = ''
+    for key in sorted(roman_numerals.keys(), reverse=True):
+        while n >= key:
+            roman_string += roman_numerals[key]
+            n -= key
+    return roman_string

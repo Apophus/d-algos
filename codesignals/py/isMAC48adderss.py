@@ -30,18 +30,20 @@ Input/Output
 
     true if inputString corresponds to MAC-48 address naming rules, false otherwise.
 """
+
+
 def isMAC48Address(inputString):
     numbers = [i for i in range(0, 10)]
     letters = [chr(i) for i in range(ord('A'), ord('G'))]
     print(numbers, letters)
-    #check length
+    # check length
     print(len(inputString))
     if len(inputString) != 17:
         return False
     is_mac = True
 
     for char in inputString:
-        
+
         if char.isdigit():
             continue
         if char.isalpha() and char in letters:
@@ -51,11 +53,13 @@ def isMAC48Address(inputString):
         else:
             # print(char)
             is_mac = False
-    
+
     return is_mac
+
 
 def isMAC48Address(inputString):
     import re
     return bool(re.match('^([0-9A-F]{2}-){5}([\dA-F]{2})$', inputString))
+
 
 print(isMAC48Address('00-1B-63-84-45-E6'))
