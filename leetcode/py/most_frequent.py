@@ -1,4 +1,6 @@
 from collections import Counter
+
+
 class Solution(object):
     def mostFrequentEven(self, nums):
         """
@@ -20,10 +22,9 @@ class Solution(object):
 
         return top[0]
 
+
 if __name__ == "__main__":
-    nums = [0,1,2,2,4,4,1]
+    nums = [0, 1, 2, 2, 4, 4, 1]
 
     soln = Solution()
     print(soln.mostFrequentEven(nums))
-
-
