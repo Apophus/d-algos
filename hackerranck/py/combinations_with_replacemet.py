@@ -1,11 +1,13 @@
 from itertools import combinations_with_replacement
 
+
 def comb_with_replacements(string_, length):
 
 	res = list(combinations_with_replacement(string_, length))
 
 	for elements in res:
 		print(''.join(elements))
+
 
 if __name__ == '__main__':
 	string_, length = input().split(' ')
