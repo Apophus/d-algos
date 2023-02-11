@@ -13,7 +13,8 @@ def solution(l, k):
             c = c.next
     return l.next if l and l.value == k else l
 
-def solution(l, k):
+
+def solution1(l, k):
     if l == None:
         return None
     if l.next == None and l.value == k:
@@ -36,13 +37,14 @@ def solution(l, k):
                 ahead = ahead.next
         return l
 
-def solution(l, k):
-   m=l
-   while m:
-      if m.next and m.next.value==k:
-         m.next=m.next.next
-      else:
-         m=m.next
-   if l and l.value==k:
-      return l.next
-   return l
+
+def solution2(l, k):
+    m = l
+    while m:
+        if m.next and m.next.value == k:
+            m.next = m.next.next
+        else:
+            m = m.next
+    if l and l.value == k:
+        return l.next
+    return l

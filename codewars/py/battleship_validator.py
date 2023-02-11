@@ -52,3 +52,20 @@ class BattleShip:
         Count submarines in the field
         """
         ...
+
+    def parse_rows(self, number):
+
+        """
+        Go through the rows of the battleship
+         identifying the vessels based on numbersof cells
+
+        :param: number : int - number of cells a vessel should occupy
+        """
+        for i in self.field:
+            ...
+        ...
+
+    def parse_columns(self):
+        ...
+
+    
