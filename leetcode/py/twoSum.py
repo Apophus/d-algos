@@ -13,7 +13,18 @@ class Solution:
                 break
         return res
 
+class SolutionII:
+    def twoSum(self, nums, target):
+        
+        nums_map = {}
+        for index, num in enumerate(nums):
+            diff = target - num
+            if diff in nums_map:
+                return [nums_map[diff],index]
+            nums_map[num] = index
+        
+    
 
 if __name__ == '__main__':
-    s = Solution()
-    print(s.twoSum([3, 2, 4],6))
+    s = SolutionII()
+    print(s.twoSum([2,7,11,15],9))
