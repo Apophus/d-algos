@@ -22,6 +22,14 @@ class Solution:
         return self.merge(left, right)
     
     def get_mid(self, head):
+        """Get the midpoint of the linkedlist
+
+        Args:
+            head (ListNode or None): head of the linkedlist
+
+        Returns:
+            ListNode: the slow pointer
+        """
         slow, fast = head, head.next
         
         while fast and fast.next:
