@@ -36,4 +36,4 @@ def solution(s, debts, interests):
         apply_interest(debts)
 
 
-    return sum(month_spend)
+    return sum(month_spend) 
