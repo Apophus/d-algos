@@ -47,7 +47,6 @@ class Codec:
             return node
         return dfs()
 
-
 # Your Codec object will be instantiated and called as such:
 # ser = Codec()
 # deser = Codec()

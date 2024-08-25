@@ -24,5 +24,3 @@ def poisonousPlants(p):
         stack.append([plant, day])
 
     return max_day    
-        
-        
