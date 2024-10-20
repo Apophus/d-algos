@@ -10,7 +10,7 @@ class Solution(object):
         for i in range(k):
             curr_sum += nums[i]
 
-        res = max(res, float(curr_sum / k,3))
+        res = max(res, float(curr_sum / k))
 
         for i in range(k, len(nums)):
             curr_sum += nums[i]
