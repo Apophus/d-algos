@@ -6,6 +6,9 @@
 #         self.right = right
 class Solution:
     def kthSmallest(self, root, k):
+        """
+        In order traversal using breadth first search
+        """
         res = 0
         stack = []
         curr_node = root
@@ -19,10 +22,9 @@ class Solution:
             if res == k:
                 return curr_node.val
             curr_node = curr_node.right
-            
-    
+
         def inOrderTraversal(self, node, k):
-            """In order tree traversal
+            """In order tree traversal using dfs
 
             Args:
                 node (TreeNode): node that's being processed.
@@ -31,6 +33,7 @@ class Solution:
             Returns:
                 int: TreeNode.val
             """
+            res = 0
             if not node or k==res:
                 return
             #go left

@@ -3,11 +3,9 @@ from collections import deque
 
 class Solution:
     def maxDepth(self, root):
-        """Solution recussively
-
+        """Solution recursively
         Args:
             root (_type_): _description_
-
         Returns:
             int: max depth of tree
         """
@@ -20,10 +18,8 @@ class Solution:
     
     def bfs(self, root):
         """Solution with breadth first search
-
         Args:
             root (root node): root node
-
         Returns:
             level: maximum depth of tree
         """
